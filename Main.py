@@ -6,7 +6,8 @@ class Evaluate:
       stack: A List which acts as a Stack.
   """
     # Write your code here
-def _init_(self, size):
+
+  def _init_(self, size):
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
       top:An integer which points to the top most element in the stack.
@@ -24,28 +25,12 @@ def _init_(self, size):
     Returns:
       True if it is empty, else returns False.
     """
-
-  def __init__(self, size):
-    """Inits Evaluate with top, size_of_stack and stack.
-    Arguments:
-      size_of_stack: An integer to set the size of stack.
-    """
-    self.top = -1
-    self.size_of_stack = size
-    self.stack = []
-
-
-  def isEmpty(self):
-    """
-    Check whether the stack is empty.
-    Returns:
-      True if it is empty, else returns False.
-    """
-      # Write your code here
- if self.top == -1:
+    # Write your code here
+    if self.top == -1:
       return True
     else:
       return False
+
 
   def pop(self):
     """
@@ -54,7 +39,7 @@ def _init_(self, size):
       The data which is popped out if the stack is not empty.
     """
     # Write your code here
-     if not self.isEmpty():
+    if not self.isEmpty():
       self.stack.pop()
 
 
@@ -65,7 +50,7 @@ def _init_(self, size):
       operand: The operand to be pushed.
     """
     # Write your code here
-     if self.top != self.size_of_stack - 1:
+    if self.top != self.size_of_stack - 1:
       self.stack.append(operand)
 
 
@@ -121,7 +106,6 @@ def _init_(self, size):
           stack[-2] = stack[-2] ^ stack[-1]
           stack.pop()
     return int(stack[-1])
-
 
 
 # Do not change the following code
